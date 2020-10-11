@@ -87,70 +87,70 @@ const store = {
       state: 'question',
       feedback: ['Awesome!', 'The correct answer is Jordan.'],
   },
-  // {
-  //     //2 [1]
-  //     question: 'What does Machu Picchu mean in Quechua?',
-  //     imageSrc: 'images/machu-picchu.jpg',
-  //     imageAlt:'picture of machu picchu during the day',
-  //     answers: [
-  //         'Old peak',
-  //         'Edge of the mountain',
-  //         'Rocky peak'
-  //     ],
-  //     correctAnswer:
-  //         'Old Peak',
-  //     buttonText:['Submit Answer','Next Question'],
-  //     state: 'question',
-  //     feedback: ['Awesome!', 'The correct answer is the Old Peak.'],
-  // },
-  // {
-  //     //3 [2]
-  //     question: 'The Chichen Itza was built by whom?',
-  //     imageSrc: 'images/chichen-itza.jpg',
-  //     imageAlt:'picture of the Chichen Itza on sun set',
-  //     answers: [
-  //         'Mayans',
-  //         'Egyptians',
-  //         'Incas'
-  //     ],
-  //     correctAnswer:
-  //         'Mayans',
-  //      buttonText:['Submit Answer','Next Question'],
-  //      state: 'question',
-  //      feedback: ['Awesome!', 'The correct answer is the Mayans.'],    
-  // },
-  // {
-  //     //4 [3]
-  //     question: 'In ancient times, what was the name of the colosseum?',
-  //     imageSrc: 'images/colosseum-rome.jpg',
-  //     imageAlt:'picture of the colosseum in the modern day setting',
-  //     answers: [
-  //         'Flavian Amphitheater',
-  //         'Maximus',
-  //         'Golden Circus'
-  //     ],
-  //     correctAnswer:
-  //         'Flavian Amphitheater',
-  //     buttonText:['Submit Answer','Next Question'],
-  //     state: 'question',
-  //     feedback: ['Awesome!', 'The correct answer is Flavian Amphitheater.'],
-  // },
-  // {
-  //     //5 [4]
-  //     question: 'In which city in India is the Taj Mahal Located?',
-  //     imageSrc: 'images/taj-mahal.jpg',
-  //     imageAlt:'picture of the Taj Mahal on sunset',
-  //     answers: [
-  //        'Agra',
-  //        'Delhi',
-  //        'Mumbai'
-  //     ],
-  //     correctAnswer:
-  //         'Agra',
-  //     buttonText:['Submit Answer','Next Question'],
-  //     state: 'question',
-  //     feedback: ['Awesome!', 'The correct answer is Agra.'],
-  //   },  
+  {
+      //2 [1]
+      question: 'What does Machu Picchu mean in Quechua?',
+      imageSrc: 'images/machu-picchu.jpg',
+      imageAlt:'picture of machu picchu during the day',
+      answers: [
+          'Old peak',
+          'Edge of the mountain',
+          'Rocky peak'
+      ],
+      correctAnswer:
+          'Old Peak',
+      buttonText:['Submit Answer','Next Question'],
+      state: 'question',
+      feedback: ['Awesome!', 'The correct answer is the Old Peak.'],
+  },
+  {
+      //3 [2]
+      question: 'The Chichen Itza was built by whom?',
+      imageSrc: 'images/chichen-itza.jpg',
+      imageAlt:'picture of the Chichen Itza on sun set',
+      answers: [
+          'Mayans',
+          'Egyptians',
+          'Incas'
+      ],
+      correctAnswer:
+          'Mayans',
+       buttonText:['Submit Answer','Next Question'],
+       state: 'question',
+       feedback: ['Awesome!', 'The correct answer is the Mayans.'],    
+  },
+  {
+      //4 [3]
+      question: 'In ancient times, what was the name of the colosseum?',
+      imageSrc: 'images/colosseum-rome.jpg',
+      imageAlt:'picture of the colosseum in the modern day setting',
+      answers: [
+          'Flavian Amphitheater',
+          'Maximus',
+          'Golden Circus'
+      ],
+      correctAnswer:
+          'Flavian Amphitheater',
+      buttonText:['Submit Answer','Next Question'],
+      state: 'question',
+      feedback: ['Awesome!', 'The correct answer is Flavian Amphitheater.'],
+  },
+  {
+      //5 [4]
+      question: 'In which city in India is the Taj Mahal Located?',
+      imageSrc: 'images/taj-mahal.jpg',
+      imageAlt:'picture of the Taj Mahal on sunset',
+      answers: [
+         'Agra',
+         'Delhi',
+         'Mumbai'
+      ],
+      correctAnswer:
+          'Agra',
+      buttonText:['Submit Answer','Next Question'],
+      state: 'question',
+      feedback: ['Awesome!', 'The correct answer is Agra.'],
+    },  
     
     {
       message: 'Finished Quiz',
