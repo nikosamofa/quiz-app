@@ -81,8 +81,7 @@ const store = {
           'Israel',
           'Jordan'          
       ],
-      correctAnswer:
-          'Jordan',
+      correctAnswer:'Jordan',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
       feedback: ['Awesome!', 'The correct answer is Jordan.'],
@@ -97,11 +96,10 @@ const store = {
           'Edge of the mountain',
           'Rocky peak'
       ],
-      correctAnswer:
-          'Old Peak',
+      correctAnswer:'Old Peak',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!', 'The correct answer is the Old Peak.'],
+      feedback: ['Awesome!','The correct answer is the Old Peak.'],
   },
   {
       //3 [2]
@@ -113,8 +111,7 @@ const store = {
           'Egyptians',
           'Incas'
       ],
-      correctAnswer:
-          'Mayans',
+      correctAnswer:'Mayans',
        buttonText:['Submit Answer','Next Question'],
        state: 'question',
        feedback: ['Awesome!', 'The correct answer is the Mayans.'],    
@@ -129,8 +126,7 @@ const store = {
           'Maximus',
           'Golden Circus'
       ],
-      correctAnswer:
-          'Flavian Amphitheater',
+      correctAnswer:'Flavian Amphitheater',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
       feedback: ['Awesome!', 'The correct answer is Flavian Amphitheater.'],
@@ -149,7 +145,7 @@ const store = {
           'Agra',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!', 'The correct answer is Agra.'],
+      feedback: ['Awesome!','The correct answer is Agra.'],
     },  
     
     {
@@ -205,8 +201,8 @@ function questionTemplate(selection){
   <div class="group">
     <div class="js-socre-div scoreBoard">
     <ul>
-    <li><p> Question:<span class="js-counter">"${store.questionNumber}" </span></p></li>
-    <li><p>your Score: <span class="js-socre">${store.numRight}</span></p> </li>
+    <li><p> Question: <span class="js-counter">${store.questionNumber} Of 5</span></p></li>
+    <li><p>your Score: <span class="js-socre"> ${store.numRight}</span></p> </li>
     <ul>
     </div>
   <div class="js-image-wrapper item-1">
@@ -236,21 +232,24 @@ function questionTemplate(selection){
 function lastPageTemplate(selection){
   return `<form id="js-last-page-form">
   <h2 class="js-form-title">${selection.message}</h2>
+  <div class="stars">
+  <img class='5stars' src="images/camera.jpg" alt="${selection.imageAlt}" >
+  </div>
   <button class="submit restart" type="submit">${selection.buttonText[0]}</button>
-  <p class='finished-feedback'>You've answered ${store.numRight} correct out of 5</p>
+  <p class='finished-feedback'>You Scored ${store.numRight} out of 5 correct!</p>
 </form>
 `;
 }
 
-function startTemplate(selection) {
-  return `
-<form id="js-form">
-  <h2 class="js-form-title">${selection.question}</h2>
-  <button class="submit start" type="submit">${selection.buttonText[0]}</button>
-  <p class="hide"></p>
-</form>
-`;
-}
+// function startTemplate(selection) {
+//   return `
+// <form id="js-form">
+//   <h2 class="js-form-title">${selection.question}</h2>
+//   <button class="submit start" type="submit">${selection.buttonText[0]}</button>
+//   <p class="hide"></p>
+// </form>
+// `;
+// }
 //navigation through pages
 
 function createTemplate(selection) {
@@ -299,14 +298,14 @@ function refreashQuiz(){
 };
 
 //checking for answers 
-function checkAnswer(input,entry){
-  // console.log(checkAnswer)
-if (input === entry){
-
-  return true;
+function checkAnswer(input,entry){  
+if (input === entry.correctAnswer){ 
+   return true;
 }
-else{return false;}
+else{
+  return false;
 }
+};
 
 //The rendering function that renders HTML and JS onto the DOM
 
@@ -333,25 +332,24 @@ function startTheQuiz(){
 
 // //feedback for question 
 function PositiveFeedback(qns){  
-  $('.hide').text(qns.feedback[0] + 'you answered Question:'+ store.numRight + ' well!')
-  console.log(PositiveFeedback)
+  $('.hide').text(qns.feedback[0] + 'you answered Question: '+ `${store.numRight}` + ' correct!');  
 }
 
 function negativeFeedback(qns){
-  $('.hide').text(qns.feedback[1] + store.numRight +' incorrect');
+  $('.hide').text(qns.feedback[1] + ' But keep going!');
 };
 
-function givingFeedback(qns,input){
+function givingFeedback(input,qns){
   
-  if (checkAnswer(input,qns.correctAnswer)){
-
-  scoreTrack();
-
-  PositiveFeedback(qns);
+  if(checkAnswer(input,qns) === true){    
+  scoreTrack()  
+  return PositiveFeedback(qns);  
 }
 else{ 
-  negativeFeedback(qns);
+
+  return negativeFeedback(qns);
 }
+
 }
 
 //check for when the question has been answered 
@@ -359,18 +357,24 @@ function UserAnswered(){
   store.hasAnswered = !store.hasAnswered;
 }
 
-function checkwhenanswered(qns,input){
+function checkwhenanswered(input,qns){
   // console.log(qns)
   if (!store.hasAnswered){
-    givingFeedback(qns,input)
+    givingFeedback(input,qns)
+    
   }
   else{ 
     UserAnswered();
     render();
   }
 }
+//suggested 
+// function checkwhenanswered(qns,input){
+//   givingFeedback(qns,input)
+//   render();
 
-function changindSubmitClass(qns){
+// }
+function changingSubmitClass(qns){
   // console.log(qns.buttonText);
   $('.feedback').addClass('next');
   $('.feedback').text(qns.buttonText[1]);
@@ -381,15 +385,18 @@ function changindSubmitClass(qns){
 //event hanlers 
 
 function getfeedback(){
-  $('.main').on('submit','.js-submit-feedback-form', event=>{
+  $('main').on('submit','.js-submit-feedback-form', event=>{
     event.preventDefault();
     // console.log("test Hello")
     let qns = store.qns[getIndex()];    
     // console.log(qns)
     let selection = $('input[name="answers"]:checked').val();
-    checkwhenanswered(qns,selection);
-    changindSubmitClass(qns);
-    UserAnswered();
+    checkwhenanswered(selection,qns);
+    changingSubmitClass(qns);
+    
+    
+
+
 
   
   })
@@ -410,7 +417,6 @@ function nextquestion(){
     event.preventDefault();
      let qns = store.qns[getIndex()];
     //  console.log(qns)
-
      updateIndex();
      changeNextButtonClass(qns);
      render();
