@@ -1,4 +1,4 @@
-/* Your styles should be mobile-first and responsive */
+/* Your styles should be mobile-first and responsive */ */
 
 /** 
   * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
@@ -6,3 +6,201 @@
   * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
   *
 */
+{
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/petra-jordan.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  height: 500px;
+  margin-top: 50;
+  margin-bottom: 50;
+  background:rgba(226, 216, 216, 0.658);
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top:50px;
+  margin-bottom: 50px;
+  border-radius: 3px; 
+}
+
+.form {
+  border: 2px solid black;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  height: 400px;
+  text-align: center;
+}
+
+.intro {
+  height: 430px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 30px;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result {
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: px;
+  padding-bottom: 10px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.black-text {
+  color: rgb(241, 239, 239);
+}
+
+legend {
+  font-size: 30px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+button {
+  position: relative;
+  top: 10px;
+  width: 150px;
+  height: 35px;
+  background-color: #996311f1;
+  border-color: #ac69122c;
+  border-radius: 3px;
+  font-size: 18px;
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+#start {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.nextButton {
+  margin-top: 20px;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+h1 {
+  padding-top: 30px;
+}
+
+h2 { 
+  margin-top: 50px;
+}
+
+p {
+  font-size: 19px;
+  color: rgb(4, 90, 4); 
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  list-style-position: inside;
+  line-height: 35px;
+  font-size: 17px;
+  display: inline-block;
+  text-align: justify;
+  height: 40px;;
+  padding: 0;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+  border: solid white 2px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.map-icon {
+  width: 60px;
+  height: 50px;
+  filter: contrast(1.60);
+}
+
+.globe {
+  width: 190px;
+  height: 150px;
+}
+
+section {
+ text-align: center;
+}
+
+label {
+  cursor: pointer;
+}
+
+input {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 320px) {
+  body{
+  background-size: 100% 110%;
+  }
+
+  legend {
+    font-size: 20px;
+  }
+
+  img {
+    width: 180px;
+    height: 140px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  legend {
+    font-size: 25px;
+  }
+
+  img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media only screen and (min-width: 568px) {
+  legend {
+    font-size: 30px;
+  }
+
+  img {
+  width: 300px;
+  height: 200px;
+  }
+}
