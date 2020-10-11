@@ -205,8 +205,8 @@ function questionTemplate(selection){
   <div class="group">
     <div class="js-socre-div scoreBoard">
     <ul>
-    <li><p> Question:<span class="js-counter"> </span></p></li>
-    <li><p>your Score: <span class="js-socre"></span></p> </li>
+    <li><p> Question:<span class="js-counter">"${store.questionNumber}" </span></p></li>
+    <li><p>your Score: <span class="js-socre">${store.numRight}</span></p> </li>
     <ul>
     </div>
   <div class="js-image-wrapper item-1">
@@ -283,7 +283,7 @@ function updateIndex(){
 
 function scoreTrack(){
   
-  store.numRight++;
+ store.numRight++;
 
 };
 
@@ -301,7 +301,7 @@ function refreashQuiz(){
 //checking for answers 
 function checkAnswer(input,entry){
   // console.log(checkAnswer)
-if (input === entry.correctAnswer){
+if (input === entry){
 
   return true;
 }
@@ -386,7 +386,7 @@ function getfeedback(){
     // console.log("test Hello")
     let qns = store.qns[getIndex()];    
     // console.log(qns)
-    let selection = $('inpput[name="answers"]:checked').val();
+    let selection = $('input[name="answers"]:checked').val();
     checkwhenanswered(qns,selection);
     changindSubmitClass(qns);
     UserAnswered();
