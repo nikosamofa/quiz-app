@@ -183,8 +183,9 @@ function startPageTemplate(selection){
   <form id="js-form">
   <div class="group">
   <div class="item-1">
-    <h2 class="js-form-title">${selection.question}</h2>
-    <p>The world is filled wonderful and at times unexplainable structures and landscapes</p>
+    <h2 class="js-form-title title">${selection.question}</h2>
+    <p>The Seven Wonders of the World or the Seven Wonders of the Ancient World is a list of remarkable constructions of classical antiquity given by various authors in guidebooks or poems popular among ancient Hellenic tourists.
+     Although the list, in its current form, did not stabilise until the Renaissance, the first such lists of seven wonders date from the 2nd–1st century BC. </p>
     <p>Lets findout just how much you know about the great wonders of the world</p>
     <button  class="submit start next" type="submit">${selection.buttonText[0]}</button>
   </div>

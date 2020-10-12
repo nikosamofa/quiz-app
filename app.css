@@ -6,64 +6,32 @@
   * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
   *
 */
-{
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&family=Sansita+Swashed:wght@300;800&display=swap');
+
+
+*{
   box-sizing: border-box;
+}
+header{
+  text-align: center;
 }
 
 body {
-  background-image: ;
+  
   background-size: contain;
-  background-repeat: no-repeat;
-  text-align: center;
-  font-family: Geneva, Tahoma, sans-serif;
-  font-size: 16px;
+  
   
 }
 
 main {
-  height: 500px;
-  margin-top: 50;
-  margin-bottom: 50;
-  background:rgba(226, 216, 216, 0.658);
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-top:50px;
-  margin-bottom: 50px;
-  border-radius: 3px; 
-}
+  display: flex;
+  justify-content:center ;
 
-.form {
-  border: 2px solid black;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  height: 400px;
-  text-align: center;
 }
 
 button {
-  position: relative;
-  top: 10px;
-  width: 150px;
-  height: 35px;
-  background-color: #996311f1;
-  border-color: #ac69122c;
-  border-radius: 3px;
-  font-size: 18px;
-  color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  cursor: pointer;
-}
-
-#start {
-  padding-top: 10px;
-  padding-bottom: 30px;
+ 
 }
 
 .nextButton {
@@ -73,44 +41,38 @@ button {
 
 h1 {
   padding-top: 30px;
+  font-family: 'Sansita Swashed', cursive;
+ 
 }
 
-h2 { 
+ .title{ 
   margin-top: 50px;
+  font-family: 'Sansita Swashed', cursive;
+  
 }
 
 p {
   font-size: 19px;
-  color: rgb(4, 90, 4); 
-  font-weight: 700;
+  color: rgb(1, 12, 1); 
+  font: weight 300;;
+  font-family: 'Roboto', sans-serif;
+ 
 }
 
 ul {
-  list-style: none;
-  list-style-position: inside;
-  line-height: 35px;
-  font-size: 17px;
-  display: inline-block;
-  text-align: justify;
-  height: 40px;;
-  padding: 0;
+  
 }
 
 img {
-  width: 300px;
-  height: 200px;
-  border: solid white 2px;
-  border-radius: 3px;
-  margin-top: 10px;
-}
 
-
-label {
-  cursor: pointer;
 }
 
 input {
-  cursor: pointer;
+  
+}
+
+.item-1{
+  flex: 1;
 }
 
 @media only screen and (min-width: 320px) {
@@ -123,10 +85,11 @@ input {
   }
 
   img {
-    width: 180px;
+    width: 100%;
     height: 140px;
   }
 }
+
 
 @media only screen and (min-width: 480px) {
   legend {
