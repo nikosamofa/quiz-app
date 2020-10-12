@@ -84,7 +84,7 @@ const store = {
       correctAnswer:'Jordan',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!', 'The correct answer is Jordan.'],
+      feedback: ['Awesome! ', 'The correct answer is Jordan.'],
   },
   {
       //2 [1]
@@ -96,10 +96,10 @@ const store = {
           'Edge of the mountain',
           'Rocky peak'
       ],
-      correctAnswer:'Old Peak',
+      correctAnswer:'Old peak',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!','The correct answer is the Old Peak.'],
+      feedback: ['Awesome! ','The correct answer is the Old Peak.'],
   },
   {
       //3 [2]
@@ -114,7 +114,7 @@ const store = {
       correctAnswer:'Mayans',
        buttonText:['Submit Answer','Next Question'],
        state: 'question',
-       feedback: ['Awesome!', 'The correct answer is the Mayans.'],    
+       feedback: ['Awesome! ', 'The correct answer is the Mayans.'],    
   },
   {
       //4 [3]
@@ -129,7 +129,7 @@ const store = {
       correctAnswer:'Flavian Amphitheater',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!', 'The correct answer is Flavian Amphitheater.'],
+      feedback: ['Awesome! ', 'The correct answer is Flavian Amphitheater.'],
   },
   {
       //5 [4]
@@ -145,7 +145,7 @@ const store = {
           'Agra',
       buttonText:['Submit Answer','Next Question'],
       state: 'question',
-      feedback: ['Awesome!','The correct answer is Agra.'],
+      feedback: ['Awesome! ','The correct answer is Agra.'],
     },  
     
     {
@@ -241,16 +241,7 @@ function lastPageTemplate(selection){
 `;
 }
 
-// function startTemplate(selection) {
-//   return `
-// <form id="js-form">
-//   <h2 class="js-form-title">${selection.question}</h2>
-//   <button class="submit start" type="submit">${selection.buttonText[0]}</button>
-//   <p class="hide"></p>
-// </form>
-// `;
-// }
-//navigation through pages
+
 
 function createTemplate(selection) {
   switch (selection.state) {
@@ -332,7 +323,7 @@ function startTheQuiz(){
 
 // //feedback for question 
 function PositiveFeedback(qns){  
-  $('.hide').text(qns.feedback[0] + 'you answered Question: '+ `${store.numRight}` + ' correct!');  
+  $('.hide').text(qns.feedback[0] + 'you answered Question: '+ `${store.questionNumber}` + ' correct!');  
 }
 
 function negativeFeedback(qns){
@@ -358,7 +349,7 @@ function UserAnswered(){
 }
 
 function checkwhenanswered(input,qns){
-  // console.log(qns)
+ 
   if (!store.hasAnswered){
     givingFeedback(input,qns)
     
@@ -375,7 +366,7 @@ function checkwhenanswered(input,qns){
 
 // }
 function changingSubmitClass(qns){
-  // console.log(qns.buttonText);
+  
   $('.feedback').addClass('next');
   $('.feedback').text(qns.buttonText[1]);
   $('.feedback').removeClass('feedback');
@@ -386,26 +377,21 @@ function changingSubmitClass(qns){
 
 function getfeedback(){
   $('main').on('submit','.js-submit-feedback-form', event=>{
-    event.preventDefault();
-    // console.log("test Hello")
-    let qns = store.qns[getIndex()];    
-    // console.log(qns)
+    event.preventDefault();   
+    let qns = store.qns[getIndex()]; 
+
     let selection = $('input[name="answers"]:checked').val();
     checkwhenanswered(selection,qns);
     changingSubmitClass(qns);
-    
-    
 
-
-
-  
-  })
+  }
+  )
 }
 
 //change attributes for the next button
 
 function changeNextButtonClass(qns){
-  // console.log(qns)
+  
   $('.next').addClass('feedback');
   $('.next').text(qns.buttonText[0]);
   $('.next').removeClass('next');
@@ -415,8 +401,7 @@ function changeNextButtonClass(qns){
 function nextquestion(){
   $('.main').on('click', '.next', event=> {
     event.preventDefault();
-     let qns = store.qns[getIndex()];
-    //  console.log(qns)
+     let qns = store.qns[getIndex()];  
      updateIndex();
      changeNextButtonClass(qns);
      render();
@@ -428,7 +413,6 @@ function nextquestion(){
 function tryAgain(){
 
   $('#js-last-page-form').on('submit','.restart', event=> {
-console.log(tryAgain())
     event.preventDefault();
     refreashQuiz();
     refreashSocre();
