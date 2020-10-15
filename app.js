@@ -188,7 +188,7 @@ function startPageTemplate(selection){
   </div>
     <div class="item-1">  
     <h2 class="js-form-title title intro">${selection.question}</h2>
-    <hr>
+   <hr>
     <p>The Seven Wonders of the World or the Seven Wonders of the Ancient World is a list of remarkable constructions of classical antiquity given by various authors in guidebooks or poems popular among ancient Hellenic tourists.
      Although the list, in its current form, did not stabilise until the Renaissance, the first such lists of seven wonders date from the 2nd–1st century BC.</span> </p>
     <p><span class="start-title">Lets findout just how much you know about the Great Wonders Of The World</span></p>
