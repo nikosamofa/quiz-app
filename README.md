@@ -1,6 +1,8 @@
 # Quiz App
 <figure><img src="images\Screenshot.png" alt="screenshot of quiz app" width="300"><figcaption>Quiz App.</figcaption></figure>
+
 ## My Quiz App
+
 This is a simple quiz app designed with:
 -html 
 -css
