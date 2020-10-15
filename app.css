@@ -34,7 +34,7 @@ header {
     justify-content: center;
     margin: 0 auto;
     width: 80%;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .start-title, .intro {
@@ -69,6 +69,7 @@ p {
     justify-content: center;
     width: 100%;
     position: relative;
+    padding: 20px;
 }
 
 /* edits for the qustion page */
@@ -76,7 +77,7 @@ p {
 .item-1 {
     justify-content: center;
     text-align: center;
-    width: 200px;
+    width: 200px; 
 }
 
 ul {
