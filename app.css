@@ -50,7 +50,8 @@ header {
 }
 
 input[type="image"] {
-    width: 400px;
+    width: 200;
+    height:400; 
     border-radius: 10px;
 }
 
@@ -68,7 +69,6 @@ p {
     display: flex;
     justify-content: center;
     width: 100%;
-    position: relative;
     padding: 20px;
 }
 
@@ -78,6 +78,7 @@ p {
     justify-content: center;
     text-align: center;
     width: 200px; 
+    margin: 0 auto;
 }
 
 ul {
@@ -101,7 +102,7 @@ hr {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: 'Roboto', sans-serif;
-    padding-right: 5px;
+    padding-right: 10px;
 }
 
 input[type="radio"] {
