@@ -1,4 +1,4 @@
-/* Your styles should be mobile-first and responsive */ */
+/* Your styles should be mobile-first and responsive */ 
 
 /** 
   * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto&family=Sansita+Swashed:wght@300;800&display=swap');
 
 /* first page edits */
-* {
+*{
   margin: 0;
   padding: 0;
   border: 0;
@@ -188,12 +188,12 @@ input[type="radio"]{
     width: 800px;    
     flex-grow: inherit;
   }
-  
-  
-  
-  
- 
-  
+
+
+
+
+
+
 
 
 
