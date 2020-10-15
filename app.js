@@ -258,8 +258,7 @@ function lastPageTemplate(selection){
 </div>
 `;
 }
-
-
+//creating page slides 
 
 function createTemplate(selection) {
   switch (selection.state) {

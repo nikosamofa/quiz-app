@@ -51,7 +51,7 @@ header{
   
 }
 input[type="image"]{
-  width: 600px;
+  width: 400px;
   border-radius: 10px;
 }
 
@@ -78,7 +78,7 @@ p{
 .item-1{  
   justify-content: center;
   text-align: center;
-  width: 800px;    
+  width: 400px;    
 }
 ul{
   list-style:none;
@@ -133,4 +133,68 @@ input[type="radio"]{
   width: 300px;
   margin:0 auto;
   font-family: 'Sansita Swashed', cursive;  
+}
+
+@media all and (min-width:700px){
+  .wrapper{
+    margin: auto;
+    width: 80%;
+  }
+
+  .group{
+  display: flex;
+  justify-content: center;
+  width: 10px 70px;
+  position: relative;
+  }
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 30px;
+  
+  
+  }
+  .start-title, .intro{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Sansita Swashed', cursive;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .title{
+    text-align: center;
+    
+  }
+  input[type="image"]{
+    width: 600px;
+    border-radius: 10px;
+  }
+  
+  
+  .group{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    }
+  
+    /* edits for the qustion page */
+  
+  .item-1{  
+    justify-content: center;
+    text-align: center;
+    width: 800px;    
+    flex-grow: inherit;
+  }
+  
+  
+  
+  
+ 
+  
+
+
+
 }
