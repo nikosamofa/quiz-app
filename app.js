@@ -180,18 +180,25 @@ let counter = 1;
 
 function startPageTemplate(selection){
   return `
+  <div class="wrapper">
   <form id="js-form">
-  <div class="group">
-  <div class="item-1">
-    <h2 class="js-form-title title">${selection.question}</h2>
+  <div>
+  <div class="title-image group">
+   <input type="image" src="images/pyramid-1.jpg" alt="Picture of the pyramids in egypt" class="img"></input>
+  </div>
+    <div class="item-1">  
+    <h2 class="js-form-title title intro">${selection.question}</h2>
+    <hr>
     <p>The Seven Wonders of the World or the Seven Wonders of the Ancient World is a list of remarkable constructions of classical antiquity given by various authors in guidebooks or poems popular among ancient Hellenic tourists.
-     Although the list, in its current form, did not stabilise until the Renaissance, the first such lists of seven wonders date from the 2nd–1st century BC. </p>
-    <p>Lets findout just how much you know about the great wonders of the world</p>
+     Although the list, in its current form, did not stabilise until the Renaissance, the first such lists of seven wonders date from the 2nd–1st century BC.</span> </p>
+    <p><span class="start-title">Lets findout just how much you know about the Great Wonders Of The World</span></p>
     <button  class="submit start next" type="submit">${selection.buttonText[0]}</button>
   </div>
   </div>
   <p class='hide'></p>
-  </form>`
+  </form>
+  </div>
+  `
 
 };
 //this is the question page template
@@ -199,46 +206,56 @@ function startPageTemplate(selection){
 function questionTemplate(selection){  
   return `
   <form class= "js-submit-feedback-form">
-  <div class="group">
+  <div class="wrapper">
+  <div>
     <div class="js-socre-div scoreBoard">
     <ul>
-    <li><p> Question: <span class="js-counter">${store.questionNumber} Of 5</span></p></li>
+    <li><p> Question: <span class="js-counter subtitle">${store.questionNumber} Of 5</span></p></li>
     <li><p>your Score: <span class="js-socre"> ${store.numRight}</span></p> </li>
-    <ul>
+    </ul>
     </div>
   <div class="js-image-wrapper item-1">
-  <img src="${selection.imageSrc}" alt="${selection.imageAlt}">
+  <input type="image" src="${selection.imageSrc}" alt="${selection.imageAlt}">
   </div>
-  <div class= "item-1">
+  <div>
     <div class="js-question">
      <h3>${selection.question}</h3>
-    </div>
     <div class="answer-div" id="answer-one">
-      <input  type="radio" class="answer" name="answers" id="answer-one" value="${selection.answers[0]}" required>${selection.answers[0]}
+      <input  type="radio" class="answer" name="answers" id="answer-one" value="${selection.answers[0]}" required> ${selection.answers[0]}
     </div>
     <div class="answer-div" id="answer-two">
-      <input type="radio" class="answer" name="answers" id="answer-two" value="${selection.answers[1]}" required>${selection.answers[1]}
+      <input type="radio" class="answer" name="answers" id="answer-two" value=" ${selection.answers[1]}" required> ${selection.answers[1]}
     </div>
     <div class="answer-div" id="answer-three">
-     <input type="radio" class="answer" name="answers" id="answer-three" value ="${selection.answers[2]}" required>${selection.answers[2]}
-    </div>    
+     <input type="radio" class="answer" name="answers" id="answer-three" value =" ${selection.answers[2]}" required> ${selection.answers[2]}
+    </div> 
+    <p class="hide"></p>
+    <div class="item-1">
+    <button class="submit feedback" type="submit">${selection.buttonText[0]}</button>
+    </div>
+ 
+  </div>   
   </div>
   </div>
-  </div>
-  <button class="submit feedback" type="submit">${selection.buttonText[0]}</button>
-  <p class="hide"></p>
-</form>`   
+  </div>  
+</form>` 
 }
 
 function lastPageTemplate(selection){
-  return `<form id="js-last-page-form">
-  <h2 class="js-form-title">${selection.message}</h2>
+  return `
+  <div class="group">
+  <div class="item-1">
+  <form id="js-last-page-form">
+  <h2 class="js-form-title title start-title">${selection.message}</h2>
   <div class="stars">
-  <img class='5stars' src="images/camera.jpg" alt="${selection.imageAlt}" >
+  <input type="image" src="images/camera.jpg" alt="${selection.imageAlt}" >
   </div>
-  <button class="submit restart" type="submit">${selection.buttonText[0]}</button>
   <p class='finished-feedback'>You Scored ${store.numRight} out of 5 correct!</p>
+  <hr>
+  <button class="submit restart" type="submit">${selection.buttonText[0]}</button>  
 </form>
+</div>
+</div>
 `;
 }
 
