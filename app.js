@@ -224,10 +224,10 @@ function questionTemplate(selection){
       <input  type="radio" class="answer" name="answers" id="answer-one" value="${selection.answers[0]}" required> ${selection.answers[0]}
     </div>
     <div class="answer-div" id="answer-two">
-      <input type="radio" class="answer" name="answers" id="answer-two" value=" ${selection.answers[1]}" required> ${selection.answers[1]}
+      <input type="radio" class="answer" name="answers" id="answer-two" value="${selection.answers[1]}" required> ${selection.answers[1]}
     </div>
     <div class="answer-div" id="answer-three">
-     <input type="radio" class="answer" name="answers" id="answer-three" value =" ${selection.answers[2]}" required> ${selection.answers[2]}
+     <input type="radio" class="answer" name="answers" id="answer-three" value ="${selection.answers[2]}" required> ${selection.answers[2]}
     </div> 
     <p class="hide"></p>
     <div class="item-1">
