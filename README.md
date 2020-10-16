@@ -4,10 +4,10 @@
 ## My Quiz App
 
 This is a simple quiz app designed with:
--html 
--css
--javascript
--jQuery
+- html 
+- css
+- javascript
+- jQuery
 
 check it out [here!](https://nikosamofa.github.io/quiz-app/)
 ## Content
